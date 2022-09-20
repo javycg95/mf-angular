@@ -29,6 +29,19 @@ const routes: Routes = [
           import('dashboard/Module').then((m) => m.DashboardModule),     
       },
     ] 
+  },
+  { 
+    path: 'about', 
+    component: MainLayoutComponent, 
+    children: [
+      ...defaultChildrens,
+      {
+        path: '',
+        outlet: 'main',
+        loadChildren: () =>
+          import('about/Module').then((m) => m.AboutModule),     
+      },
+    ] 
   }
 ];
 

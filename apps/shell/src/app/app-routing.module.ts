@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
-import { NxWelcomeComponent } from './nx-welcome.component';
 
 const defaultChildrens = [
   {
@@ -26,7 +25,8 @@ const routes: Routes = [
       {
         path: '',
         outlet: 'main',
-        component: NxWelcomeComponent,
+        loadChildren: () =>
+          import('dashboard/Module').then((m) => m.DashboardModule),     
       },
     ] 
   }

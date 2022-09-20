@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
-import { NxWelcomeComponent } from './nx-welcome.component';
 
 @NgModule({
   imports: [
@@ -18,7 +17,6 @@ import { NxWelcomeComponent } from './nx-welcome.component';
   ],
   declarations: [
     AppComponent,
-    NxWelcomeComponent,
     MainLayoutComponent
   ],
   bootstrap: [ AppComponent ]
